@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NameForm } from "./Input-elements";
 
 function General_top() {
     return (
@@ -8,24 +9,18 @@ function General_top() {
 
 function General_mid() {
     const [firstName, setFirstName] = useState('');
+    // const [inputMode, setInputMode] = useState(true);
 
     function handleFirstNameChange(e) {
         setFirstName(e.target.value);
     }
 
     return (
-        <form>
-            <label>First Name:
-                <input
-                    type='text'
-                    id='firstNameInput'
-                    name='firstNameInput'
-                    value={firstName}
-                    onChange={handleFirstNameChange}>
-                </input>
-            </label>
-            <button type='submit'>submit</button>
-        </form>
+
+        <NameForm
+            firstName={firstName}
+            handleFirstNameChange={handleFirstNameChange}
+        ></NameForm>
     );
 }
 
