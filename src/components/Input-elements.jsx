@@ -1,18 +1,21 @@
 import { useState } from "react";
 
 function Form({
-    value,
+    labelText,
+    inputType,
+    inputValue,
+    inputId,
     handleChange,
     handleSubmit }) {
 
     return (
         <form>
-            <label>First Name:
+            <label>{labelText}:
                 <input
-                    type='text'
-                    id='firstNameInput'
-                    name='firstNameInput'
-                    value={value}
+                    type={inputType}
+                    value={inputValue}
+                    id={inputId}
+                    name={inputId}
                     onChange={handleChange}>
                 </input>
             </label>
