@@ -1,6 +1,9 @@
 import { useState } from "react";
 
-function NameForm({ firstName, handleFirstNameChange }) {
+function NameForm({
+    firstName,
+    handleFirstNameChange,
+    handleSubmit }) {
 
     return (
         <form>
@@ -13,7 +16,7 @@ function NameForm({ firstName, handleFirstNameChange }) {
                     onChange={handleFirstNameChange}>
                 </input>
             </label>
-            <button type='submit'>submit</button>
+            <button type='submit' onClick={handleSubmit}>submit</button>
         </form>
     );
 }

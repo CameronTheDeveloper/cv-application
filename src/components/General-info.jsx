@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NameForm } from "./Input-elements";
+import { NameInfo } from "./Info-elements";
 
 function General_top() {
     return (
@@ -15,12 +16,20 @@ function General_mid() {
         setFirstName(e.target.value);
     }
 
-    return (
+    function handleSubmit() {
+        alert(firstName);
+    }
 
-        <NameForm
-            firstName={firstName}
-            handleFirstNameChange={handleFirstNameChange}
-        ></NameForm>
+    return (
+        <div className='general-info container'>
+            <NameForm
+                firstName={firstName}
+                handleFirstNameChange={handleFirstNameChange}
+                handleSubmit={handleSubmit}
+            ></NameForm>
+            <NameInfo firstName={firstName}></NameInfo>
+        </div>
+
     );
 }
 
