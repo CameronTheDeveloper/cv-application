@@ -21,6 +21,9 @@ function General_mid() {
         setInputMode(false);
     }
 
+    function handleEdit() {
+        setInputMode(true);
+    }
 
     return (
         <div className='general-info container'>
@@ -32,7 +35,8 @@ function General_mid() {
                         handleSubmit={handleSubmit}>
                     </NameForm>
                     : <NameInfo
-                        firstName={firstName}>
+                        firstName={firstName}
+                        handleEdit={handleEdit}>
                     </NameInfo>
             }
         </div>
