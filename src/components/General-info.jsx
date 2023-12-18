@@ -10,24 +10,31 @@ function General_top() {
 
 function General_mid() {
     const [firstName, setFirstName] = useState('');
-    // const [inputMode, setInputMode] = useState(true);
+    const [inputMode, setInputMode] = useState(true);
 
     function handleFirstNameChange(e) {
         setFirstName(e.target.value);
     }
 
-    function handleSubmit() {
-        alert(firstName);
+    function handleSubmit(e) {
+        e.preventDefault();
+        setInputMode(false);
     }
+
 
     return (
         <div className='general-info container'>
-            <NameForm
-                firstName={firstName}
-                handleFirstNameChange={handleFirstNameChange}
-                handleSubmit={handleSubmit}
-            ></NameForm>
-            <NameInfo firstName={firstName}></NameInfo>
+            {
+                inputMode ?
+                    <NameForm
+                        firstName={firstName}
+                        handleFirstNameChange={handleFirstNameChange}
+                        handleSubmit={handleSubmit}>
+                    </NameForm>
+                    : <NameInfo
+                        firstName={firstName}>
+                    </NameInfo>
+            }
         </div>
 
     );
