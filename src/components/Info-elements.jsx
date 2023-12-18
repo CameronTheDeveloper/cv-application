@@ -1,10 +1,10 @@
-function Info({ data, handleEdit }) {
+function Info({ data, handleEdit, infoClass }) {
     return (
         <>
-            <div className='name-container'>
-                <div className='name'><h1>{data}</h1></div>
+            <div className='info'>
+                <div className={infoClass}><h1>{data}</h1></div>
+                <button onClick={handleEdit}>Edit</button>
             </div>
-            <button onClick={handleEdit}>Edit</button>
         </>
     );
 }

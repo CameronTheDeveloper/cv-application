@@ -39,7 +39,8 @@ function General_mid() {
                     </Form>
                     : <Info
                         data={firstName}
-                        handleEdit={handleEdit}>
+                        handleEdit={handleEdit}
+                        infoClass={'name'}>
                     </Info>
             }
         </div>
