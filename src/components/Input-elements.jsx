@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 function Form({
-    firstName,
-    handleFirstNameChange,
+    value,
+    handleChange,
     handleSubmit }) {
 
     return (
@@ -12,8 +12,8 @@ function Form({
                     type='text'
                     id='firstNameInput'
                     name='firstNameInput'
-                    value={firstName}
-                    onChange={handleFirstNameChange}>
+                    value={value}
+                    onChange={handleChange}>
                 </input>
             </label>
             <button type='submit' onClick={handleSubmit}>submit</button>

@@ -30,12 +30,12 @@ function General_mid() {
             {
                 inputMode ?
                     <Form
-                        firstName={firstName}
-                        handleFirstNameChange={handleFirstNameChange}
+                        value={firstName}
+                        handleChange={handleFirstNameChange}
                         handleSubmit={handleSubmit}>
                     </Form>
                     : <Info
-                        firstName={firstName}
+                        data={firstName}
                         handleEdit={handleEdit}>
                     </Info>
             }
