@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NameForm } from "./Input-elements";
+import { Form } from "./Input-elements";
 import { NameInfo } from "./Info-elements";
 
 function General_top() {
@@ -29,11 +29,11 @@ function General_mid() {
         <div className='general-info container'>
             {
                 inputMode ?
-                    <NameForm
+                    <Form
                         firstName={firstName}
                         handleFirstNameChange={handleFirstNameChange}
                         handleSubmit={handleSubmit}>
-                    </NameForm>
+                    </Form>
                     : <NameInfo
                         firstName={firstName}
                         handleEdit={handleEdit}>

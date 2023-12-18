@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function NameForm({
+function Form({
     firstName,
     handleFirstNameChange,
     handleSubmit }) {
@@ -21,4 +21,4 @@ function NameForm({
     );
 }
 
-export { NameForm };
+export { Form };
