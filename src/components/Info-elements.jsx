@@ -1,4 +1,4 @@
-function NameInfo({ firstName, handleEdit }) {
+function Info({ firstName, handleEdit }) {
     const fullName = firstName;
 
     return (
@@ -11,4 +11,4 @@ function NameInfo({ firstName, handleEdit }) {
     );
 }
 
-export { NameInfo };
+export { Info };

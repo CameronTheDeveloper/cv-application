@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form } from "./Input-elements";
-import { NameInfo } from "./Info-elements";
+import { Info } from "./Info-elements";
 
 function General_top() {
     return (
@@ -34,10 +34,10 @@ function General_mid() {
                         handleFirstNameChange={handleFirstNameChange}
                         handleSubmit={handleSubmit}>
                     </Form>
-                    : <NameInfo
+                    : <Info
                         firstName={firstName}
                         handleEdit={handleEdit}>
-                    </NameInfo>
+                    </Info>
             }
         </div>
 
