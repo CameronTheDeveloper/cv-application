@@ -46,10 +46,10 @@ function General_mid() {
 
 function GeneralInfo() {
     return (
-        <>
+        <div id='general-info'>
             <General_top></General_top>
             <General_mid></General_mid>
-        </>
+        </div>
     );
 }
 
