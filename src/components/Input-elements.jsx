@@ -19,7 +19,6 @@ function Form({
                     onChange={handleChange}>
                 </input>
             </label>
-            <button type='submit' onClick={handleSubmit}>submit</button>
         </form>
     );
 }
