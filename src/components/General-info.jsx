@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form } from "./Input-elements";
-import { Info } from "./Info-elements";
+import InfoSection from "./Info-section";
 
 function General_top() {
     return (
@@ -10,38 +10,28 @@ function General_top() {
 
 function General_mid() {
     const [firstName, setFirstName] = useState('');
-    const [inputMode, setInputMode] = useState(true);
 
     function handleFirstNameChange(e) {
         setFirstName(e.target.value);
     }
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        setInputMode(false);
-    }
-
-    function handleEdit() {
-        setInputMode(true);
-    }
-
     return (
         <div className='general-info container'>
             {
-                inputMode ?
-                    <Form
-                        labelText={'First Name'}
-                        inputType={'text'}
-                        inputValue={firstName}
-                        inputId={'firstNameInput'}
-                        handleChange={handleFirstNameChange}
-                        handleSubmit={handleSubmit}>
-                    </Form>
-                    : <Info
-                        data={firstName}
-                        handleEdit={handleEdit}
-                        infoClass={'name'}>
-                    </Info>
+                <div>
+                    <InfoSection
+                        inputs={<Form
+                            labelText={'First Name'}
+                            inputType={'text'}
+                            inputValue={firstName}
+                            inputId={'firstNameInput'}
+                            handleChange={handleFirstNameChange}
+                        >
+                        </Form>}
+                        info={firstName}>
+                    </InfoSection>
+
+                </div>
             }
         </div>
 
