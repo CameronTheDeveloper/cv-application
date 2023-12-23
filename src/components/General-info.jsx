@@ -9,10 +9,12 @@ function General_top() {
 }
 
 function General_mid() {
-    const [firstName, setFirstName] = useState('');
+    const [userInfo, setUserInfo] = useState({
+        firstName: ''
+    });
 
     function handleFirstNameChange(e) {
-        setFirstName(e.target.value);
+        setUserInfo({ ...userInfo, firstName: e.target.value });
     }
 
     return (
@@ -21,10 +23,10 @@ function General_mid() {
                 <div>
                     <InfoSection
                         inputs={<NameForm
-                            firstName={firstName}
+                            firstName={userInfo.firstName}
                             handleChange={handleFirstNameChange}>
                         </NameForm>}
-                        info={firstName}>
+                        info={userInfo.firstName}>
                     </InfoSection>
 
                 </div>
