@@ -1,12 +1,11 @@
 import { useState } from "react";
 
-function Form({
+function Input({
     labelText,
     inputType,
     inputValue,
     inputId,
-    handleChange,
-    handleSubmit }) {
+    handleChange }) {
 
     return (
         <label>{labelText}:
@@ -24,13 +23,13 @@ function Form({
 function NameForm({ firstName, handleChange }) {
     return (
         <form className='input-form'>
-            <Form
+            <Input
                 labelText={'First Name'}
                 inputType={'text'}
                 inputValue={firstName}
                 inputId={'firstNameInput'}
                 handleChange={handleChange}>
-            </Form>
+            </Input>
         </form>
     );
 }
