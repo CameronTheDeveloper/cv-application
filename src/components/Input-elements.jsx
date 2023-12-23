@@ -20,13 +20,13 @@ function Input({
     );
 }
 
-function NameForm({ firstName, handleChange }) {
+function NameForm({ userInfo, handleChange }) {
     return (
         <form className='input-form'>
             <Input
                 labelText={'First Name'}
                 inputType={'text'}
-                inputValue={firstName}
+                inputValue={userInfo.firstName}
                 inputId={'firstNameInput'}
                 handleChange={handleChange}>
             </Input>

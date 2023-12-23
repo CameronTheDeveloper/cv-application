@@ -23,7 +23,7 @@ function General_mid() {
                 <div>
                     <InfoSection
                         inputs={<NameForm
-                            firstName={userInfo.firstName}
+                            userInfo={userInfo}
                             handleChange={handleFirstNameChange}>
                         </NameForm>}
                         info={userInfo.firstName}>
