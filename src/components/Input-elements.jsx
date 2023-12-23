@@ -9,18 +9,30 @@ function Form({
     handleSubmit }) {
 
     return (
-        <form>
-            <label>{labelText}:
-                <input
-                    type={inputType}
-                    value={inputValue}
-                    id={inputId}
-                    name={inputId}
-                    onChange={handleChange}>
-                </input>
-            </label>
+        <label>{labelText}:
+            <input
+                type={inputType}
+                value={inputValue}
+                id={inputId}
+                name={inputId}
+                onChange={handleChange}>
+            </input>
+        </label>
+    );
+}
+
+function NameForm({ firstName, handleChange }) {
+    return (
+        <form className='input-form'>
+            <Form
+                labelText={'First Name'}
+                inputType={'text'}
+                inputValue={firstName}
+                inputId={'firstNameInput'}
+                handleChange={handleChange}>
+            </Form>
         </form>
     );
 }
 
-export { Form };
+export { NameForm };
