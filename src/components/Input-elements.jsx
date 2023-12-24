@@ -35,6 +35,13 @@ function NameForm({ userInfo, handleChange }) {
                 handleChange={handleChange}>
             </Input>
             <Input
+                labelText={'Middle Initial'}
+                inputType={'text'}
+                inputValue={userInfo.middleInit}
+                inputName={'middleInit'}
+                handleChange={handleChange}
+                maxLength={1}></Input>
+            <Input
                 labelText={'Last Name'}
                 inputType={'text'}
                 inputValue={userInfo.lastName}

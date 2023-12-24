@@ -11,10 +11,11 @@ function General_top() {
 function General_mid() {
     const [userInfo, setUserInfo] = useState({
         firstName: '',
+        middleInit: '',
         lastName: ''
     });
 
-    const userFullName = `${userInfo.firstName} ${userInfo.lastName}`;
+    const userFullName = `${userInfo.firstName} ${userInfo.middleInit}. ${userInfo.lastName}`;
 
     function handleChange(e) {
         setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
