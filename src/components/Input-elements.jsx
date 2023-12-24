@@ -12,7 +12,7 @@ function Input({
             <input
                 type={inputType}
                 value={inputValue}
-                id={inputName}
+                id={`${inputName}-input`}
                 name={inputName}
                 onChange={handleChange}>
             </input>
