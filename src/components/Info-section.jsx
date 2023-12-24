@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function InfoSection({ inputs, formID, info }) {
+function InfoSection({ inputs, info }) {
     const [inputMode, setInputMode] = useState(true);
 
     function handleSubmit(e) {
