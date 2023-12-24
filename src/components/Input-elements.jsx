@@ -4,7 +4,7 @@ function Input({
     labelText,
     inputType,
     inputValue,
-    inputId,
+    inputName,
     handleChange }) {
 
     return (
@@ -12,8 +12,8 @@ function Input({
             <input
                 type={inputType}
                 value={inputValue}
-                id={inputId}
-                name={inputId}
+                id={inputName}
+                name={inputName}
                 onChange={handleChange}>
             </input>
         </label>
@@ -27,7 +27,7 @@ function NameForm({ userInfo, handleChange }) {
                 labelText={'First Name'}
                 inputType={'text'}
                 inputValue={userInfo.firstName}
-                inputId={'firstNameInput'}
+                inputName={'firstName'}
                 handleChange={handleChange}>
             </Input>
         </form>

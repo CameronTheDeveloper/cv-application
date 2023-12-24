@@ -13,8 +13,8 @@ function General_mid() {
         firstName: ''
     });
 
-    function handleFirstNameChange(e) {
-        setUserInfo({ ...userInfo, firstName: e.target.value });
+    function handleChange(e) {
+        setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
     }
 
     return (
@@ -24,7 +24,7 @@ function General_mid() {
                     <InfoSection
                         inputs={<NameForm
                             userInfo={userInfo}
-                            handleChange={handleFirstNameChange}>
+                            handleChange={handleChange}>
                         </NameForm>}
                         info={userInfo.firstName}>
                     </InfoSection>
