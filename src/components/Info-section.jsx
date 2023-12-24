@@ -16,9 +16,7 @@ function InfoSection({ inputs, formID, info }) {
         <div className='info-section'>
             {inputMode ? inputs
                 : <div className="info">{info}</div>}
-            {inputMode ?
-                <button type='submit' form={formID} className='submit-button' onClick={handleSubmit}>Submit</button>
-                : <button className='edit-button' onClick={handleEdit}>Edit</button>}
+            {!inputMode && <button className='edit-button' onClick={handleEdit}>Edit</button>}
         </div>
     );
 }

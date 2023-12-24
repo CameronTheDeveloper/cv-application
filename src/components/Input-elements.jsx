@@ -49,6 +49,7 @@ function NameForm({ userInfo, formID, handleChange }) {
                 inputName={'lastName'}
                 handleChange={handleChange}>
             </Input>
+            <button type='submit'>Submit</button>
         </form>
     );
 }
