@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function InfoSection({ inputs, info }) {
+function InfoSection({ inputs, formID, info }) {
     const [inputMode, setInputMode] = useState(true);
 
     function handleSubmit(e) {
@@ -17,7 +17,7 @@ function InfoSection({ inputs, info }) {
             {inputMode ? inputs
                 : <div className="info">{info}</div>}
             {inputMode ?
-                <button type='submit' className='submit-button' onClick={handleSubmit}>Submit</button>
+                <button type='submit' form={formID} className='submit-button' onClick={handleSubmit}>Submit</button>
                 : <button className='edit-button' onClick={handleEdit}>Edit</button>}
         </div>
     );

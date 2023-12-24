@@ -33,6 +33,7 @@ function General_mid() {
                             formID={formIDs.nameFormID}
                             handleChange={handleChange}>
                         </NameForm>}
+                        formID={formIDs.nameFormID}
                         info={userFullName}>
                     </InfoSection>
 
