@@ -24,9 +24,13 @@ function Input({
     );
 }
 
-function NameForm({ userInfo, formID, handleChange }) {
+function NameForm({
+    userInfo,
+    formID,
+    handleChange,
+    handleSubmit }) {
     return (
-        <form id={formID}>
+        <form id={formID} onSubmit={handleSubmit}>
             <Input
                 labelText={'First Name'}
                 inputType={'text'}

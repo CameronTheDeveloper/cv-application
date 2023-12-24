@@ -23,6 +23,11 @@ function General_mid() {
         setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
     }
 
+    function handleSubmit(e) {
+        e.preventDefault();
+        e.target.className = 'hide';
+    }
+
     return (
         <div className='general-info container'>
             {
@@ -31,7 +36,8 @@ function General_mid() {
                         inputs={<NameForm
                             userInfo={userInfo}
                             formID={formIDs.nameFormID}
-                            handleChange={handleChange}>
+                            handleChange={handleChange}
+                            handleSubmit={handleSubmit}>
                         </NameForm>}
                         formID={formIDs.nameFormID}
                         info={userFullName}>
