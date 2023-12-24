@@ -10,8 +10,11 @@ function General_top() {
 
 function General_mid() {
     const [userInfo, setUserInfo] = useState({
-        firstName: ''
+        firstName: '',
+        lastName: ''
     });
+
+    const userFullName = `${userInfo.firstName} ${userInfo.lastName}`;
 
     function handleChange(e) {
         setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
@@ -26,7 +29,7 @@ function General_mid() {
                             userInfo={userInfo}
                             handleChange={handleChange}>
                         </NameForm>}
-                        info={userInfo.firstName}>
+                        info={userFullName}>
                     </InfoSection>
 
                 </div>

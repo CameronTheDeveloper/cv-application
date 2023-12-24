@@ -30,6 +30,13 @@ function NameForm({ userInfo, handleChange }) {
                 inputName={'firstName'}
                 handleChange={handleChange}>
             </Input>
+            <Input
+                labelText={'Last Name'}
+                inputType={'text'}
+                inputValue={userInfo.lastName}
+                inputName={'lastName'}
+                handleChange={handleChange}>
+            </Input>
         </form>
     );
 }
