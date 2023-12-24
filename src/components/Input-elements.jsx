@@ -5,7 +5,9 @@ function Input({
     inputType,
     inputValue,
     inputName,
-    handleChange }) {
+    handleChange,
+    maxLength = 50,
+    minLength = 1 }) {
 
     return (
         <label>{labelText}:
@@ -14,7 +16,9 @@ function Input({
                 value={inputValue}
                 id={`${inputName}-input`}
                 name={inputName}
-                onChange={handleChange}>
+                onChange={handleChange}
+                maxLength={maxLength}
+                minLength={minLength}>
             </input>
         </label>
     );
