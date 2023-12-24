@@ -24,9 +24,9 @@ function Input({
     );
 }
 
-function NameForm({ userInfo, handleChange }) {
+function NameForm({ userInfo, formID, handleChange }) {
     return (
-        <form className='input-form'>
+        <form id={formID}>
             <Input
                 labelText={'First Name'}
                 inputType={'text'}
@@ -40,7 +40,8 @@ function NameForm({ userInfo, handleChange }) {
                 inputValue={userInfo.middleInit}
                 inputName={'middleInit'}
                 handleChange={handleChange}
-                maxLength={1}></Input>
+                maxLength={1}>
+            </Input>
             <Input
                 labelText={'Last Name'}
                 inputType={'text'}

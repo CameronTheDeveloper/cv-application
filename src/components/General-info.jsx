@@ -15,6 +15,8 @@ function General_mid() {
         lastName: ''
     });
 
+    const formIDs = { nameFormID: 'name-form' };
+
     const userFullName = `${userInfo.firstName} ${userInfo.middleInit}. ${userInfo.lastName}`;
 
     function handleChange(e) {
@@ -28,6 +30,7 @@ function General_mid() {
                     <InfoSection
                         inputs={<NameForm
                             userInfo={userInfo}
+                            formID={formIDs.nameFormID}
                             handleChange={handleChange}>
                         </NameForm>}
                         info={userFullName}>
