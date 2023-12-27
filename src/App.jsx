@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='section-container'>
         <GeneralSection></GeneralSection>
         <EducationSection></EducationSection>
         <ExperienceSection></ExperienceSection>
