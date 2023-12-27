@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function Form({ id, handleSubmit, children }) {
     return (
-        <form id={id} onSubmit={handleSubmit}>\
+        <form id={id} onSubmit={handleSubmit}>
             {children}
             <button type='submit'>Submit</button>
         </form>
