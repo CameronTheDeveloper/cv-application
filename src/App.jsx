@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GeneralInfo } from './components/General-section';
+import GeneralSection from './components/General-section';
 import './App.css';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div>
-        <GeneralInfo></GeneralInfo>
+        <GeneralSection></GeneralSection>
       </div>
     </>
   );

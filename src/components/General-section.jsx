@@ -1,14 +1,9 @@
 import { useState } from "react";
 import { NameInputs, ContactInputs } from "./Input-elements";
+import Section from "./Section";
 import InfoSection from "./Info-section";
 
-function General_top() {
-    return (
-        <h1>General Information</h1>
-    );
-}
-
-function GeneralSection() {
+export default function GeneralSection() {
     const [userInfo, setUserInfo] = useState({
         firstName: '',
         middleInit: '',
@@ -24,7 +19,7 @@ function GeneralSection() {
     }
 
     return (
-        <div className='general-section container'>
+        <Section sectionID={'general-section'} sectionTitle={'General Information'}>
             <InfoSection
                 inputs={<NameInputs
                     userInfo={userInfo}
@@ -44,17 +39,6 @@ function GeneralSection() {
                     <div className='phone-number'>{userInfo.phoneNumber}</div>
                 </>}>
             </InfoSection>
-        </div >
+        </Section >
     );
 }
-
-function GeneralInfo() {
-    return (
-        <div id='general-section'>
-            <General_top></General_top>
-            <GeneralSection></GeneralSection>
-        </div>
-    );
-}
-
-export { GeneralInfo };
