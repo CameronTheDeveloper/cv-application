@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GeneralInfo } from './components/General-info';
+import { GeneralInfo } from './components/General-section';
 import './App.css';
 
 function App() {

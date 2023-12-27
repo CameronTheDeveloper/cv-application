@@ -24,7 +24,7 @@ function General_mid() {
     }
 
     return (
-        <div className='general-info container'>
+        <div className='general-section container'>
             <InfoSection
                 inputs={<NameInputs
                     userInfo={userInfo}
@@ -50,7 +50,7 @@ function General_mid() {
 
 function GeneralInfo() {
     return (
-        <div id='general-info'>
+        <div id='general-section'>
             <General_top></General_top>
             <General_mid></General_mid>
         </div>
