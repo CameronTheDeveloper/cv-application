@@ -25,29 +25,26 @@ function General_mid() {
 
     return (
         <div className='general-info container'>
-            {
-                <div>
-                    <InfoSection
-                        inputs={<NameInputs
-                            userInfo={userInfo}
-                            handleChange={handleChange}>
-                        </NameInputs>}
-                        formID={'name-form'}
-                        info={userFullName}>
-                    </InfoSection>
-                    <InfoSection
-                        inputs={<ContactInputs
-                            userInfo={userInfo}
-                            handleChange={handleChange}>
-
-                        </ContactInputs>}
-                        formID={'contact-form'}
-                        info={`${userInfo.email} ${userInfo.phoneNumber}`}>
-
-                    </InfoSection>
-                </div>
-            }
-        </div>
+            <InfoSection
+                inputs={<NameInputs
+                    userInfo={userInfo}
+                    handleChange={handleChange}>
+                </NameInputs>}
+                formID={'name-form'}
+                info={<div className='name'>{userFullName}</div>}>
+            </InfoSection>
+            <InfoSection
+                inputs={<ContactInputs
+                    userInfo={userInfo}
+                    handleChange={handleChange}>
+                </ContactInputs>}
+                formID={'contact-form'}
+                info={<>
+                    <div className='email'>{userInfo.email}</div>
+                    <div className='phone-number'>{userInfo.phoneNumber}</div>
+                </>}>
+            </InfoSection>
+        </div >
     );
 }
 
