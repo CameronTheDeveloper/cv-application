@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import GeneralSection from './components/General-section';
+import GeneralSection from './components/GeneralSection';
 import './App.css';
 
 function App() {
