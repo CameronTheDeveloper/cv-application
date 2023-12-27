@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import GeneralSection from './components/GeneralSection';
+import EducationSection from './components/EducationSection';
 import './App.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <div>
         <GeneralSection></GeneralSection>
+        <EducationSection></EducationSection>
       </div>
     </>
   );
