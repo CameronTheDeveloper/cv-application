@@ -35,10 +35,9 @@ function Input({
 
 function NameInputs({
     userInfo,
-    handleChange,
-    handleSubmit }) {
+    handleChange }) {
     return (
-        <Form id={'name-form'} onSubmit={handleSubmit}>
+        <>
             <Input
                 labelText={'First Name'}
                 inputType={'text'}
@@ -61,8 +60,8 @@ function NameInputs({
                 inputName={'lastName'}
                 handleChange={handleChange}>
             </Input>
-        </Form>
+        </>
     );
 }
 
-export { NameInputs };
+export { Form, NameInputs };

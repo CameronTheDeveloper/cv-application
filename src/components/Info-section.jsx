@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Form } from "./Input-elements";
 
-function InfoSection({ inputs, info }) {
+function InfoSection({ inputs, formID, info }) {
     const [inputMode, setInputMode] = useState(true);
 
     function handleSubmit(e) {
@@ -14,11 +15,14 @@ function InfoSection({ inputs, info }) {
 
     return (
         <div className='info-section'>
-            {inputMode ? inputs
+            {inputMode ? <Form
+                id={formID}
+                handleSubmit={handleSubmit}>{inputs}
+            </Form>
                 : <div className="info">{info}</div>}
             {!inputMode && <button className='edit-button' onClick={handleEditToggle}>Edit</button>}
         </div>
     );
-}
+};
 
 export default InfoSection;
