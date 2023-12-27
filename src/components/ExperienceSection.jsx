@@ -6,7 +6,9 @@ import { EmploymentInputs } from "./Input-elements";
 export default function ExperienceSection() {
     const [userInfo, setUserInfo] = useState({
         companyName: '',
-        positionTitle: ''
+        positionTitle: '',
+        startDate: '',
+        endDate: '',
     });
 
     function handleChange(e) {
@@ -28,6 +30,9 @@ export default function ExperienceSection() {
                     </div>
                     <div className="position-title">
                         {userInfo.positionTitle}
+                    </div>
+                    <div className="start-date">
+                        {userInfo.startDate}
                     </div>
                 </>}></InfoSection>
         </Section>

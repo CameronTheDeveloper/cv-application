@@ -124,6 +124,13 @@ function EmploymentInputs({ userInfo, handleChange }) {
                 inputName={'positionTitle'}
                 handleChange={handleChange}
             ></Input>
+            <Input
+                labelText={'Start Date'}
+                inputType={'date'}
+                inputValue={userInfo.startDate}
+                inputName={'startDate'}
+                handleChange={handleChange}
+            ></Input>
         </>
     );
 }
