@@ -86,4 +86,18 @@ function ContactInputs({ userInfo, handleChange }) {
     );
 }
 
-export { Form, NameInputs, ContactInputs };
+function SchoolInputs({ userInfo, handleChange }) {
+    return (
+        <>
+            <Input
+                labelText={'School Name'}
+                inputType={'text'}
+                inputValue={userInfo.schoolName}
+                inputName={'schoolName'}
+                handleChange={handleChange}
+            ></Input>
+        </>
+    );
+}
+
+export { Form, NameInputs, ContactInputs, SchoolInputs };
