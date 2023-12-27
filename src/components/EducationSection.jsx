@@ -20,7 +20,10 @@ export default function EducationSection() {
                 inputs={<SchoolInputs
                     userInfo={userInfo}
                     handleChange={handleChange}>
-                </SchoolInputs>}>
+                </SchoolInputs>}
+                info={<div className="school-name">
+                    {userInfo.schoolName}
+                </div>}>
 
             </InfoSection>
         </Section>
