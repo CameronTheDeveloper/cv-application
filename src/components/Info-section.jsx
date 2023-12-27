@@ -8,7 +8,7 @@ function InfoSection({ inputs, info }) {
         setInputMode(false);
     }
 
-    function handleEdit() {
+    function handleEditToggle() {
         setInputMode(true);
     }
 
@@ -16,7 +16,7 @@ function InfoSection({ inputs, info }) {
         <div className='info-section'>
             {inputMode ? inputs
                 : <div className="info">{info}</div>}
-            {!inputMode && <button className='edit-button' onClick={handleEdit}>Edit</button>}
+            {!inputMode && <button className='edit-button' onClick={handleEditToggle}>Edit</button>}
         </div>
     );
 }
