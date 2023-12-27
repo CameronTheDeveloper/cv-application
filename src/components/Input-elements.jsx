@@ -96,6 +96,13 @@ function SchoolInputs({ userInfo, handleChange }) {
                 inputName={'schoolName'}
                 handleChange={handleChange}
             ></Input>
+            <Input
+                labelText={'Degree'}
+                inputType={'text'}
+                inputValue={userInfo.degree}
+                inputName={'degree'}
+                handleChange={handleChange}
+            ></Input>
         </>
     );
 }

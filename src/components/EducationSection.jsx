@@ -5,7 +5,8 @@ import { SchoolInputs } from "./Input-elements";
 
 export default function EducationSection() {
     const [userInfo, setUserInfo] = useState({
-        schoolName: ''
+        schoolName: '',
+        degree: ''
     });
 
     function handleChange(e) {
@@ -21,10 +22,12 @@ export default function EducationSection() {
                     userInfo={userInfo}
                     handleChange={handleChange}>
                 </SchoolInputs>}
-                info={<div className="school-name">
-                    {userInfo.schoolName}
-                </div>}>
-
+                info={<>
+                    <div className="school-name">
+                        {userInfo.schoolName}
+                    </div>
+                    <div className="degree">{userInfo.degree}</div>
+                </>}>
             </InfoSection>
         </Section>
     );
