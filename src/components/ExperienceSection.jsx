@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Section from "./Section";
 import InfoSection from "./InfoSection";
+import { EmploymentInputs } from "./Input-elements";
 
 export default function ExperienceSection() {
     const [userInfo, setUserInfo] = useState({
@@ -17,7 +18,10 @@ export default function ExperienceSection() {
             sectionTitle={'Experience'}
             sectionID={'experience-section'}>
             <InfoSection
-            ></InfoSection>
+                inputs={<EmploymentInputs
+                    userInfo={userInfo}
+                    handleChange={handleChange}>
+                </EmploymentInputs>}></InfoSection>
         </Section>
     );
 }
