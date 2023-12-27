@@ -1,0 +1,9 @@
+.info-section form {
+    display: flex;
+    padding: 1rem;
+}
+
+.info-section form .inputs {
+    display: grid;
+    justify-items: start;
+}
