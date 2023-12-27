@@ -21,7 +21,12 @@ export default function ExperienceSection() {
                 inputs={<EmploymentInputs
                     userInfo={userInfo}
                     handleChange={handleChange}>
-                </EmploymentInputs>}></InfoSection>
+                </EmploymentInputs>}
+                info={<>
+                    <div className="company-name">
+                        {userInfo.companyName}
+                    </div>
+                </>}></InfoSection>
         </Section>
     );
 }
