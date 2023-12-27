@@ -17,7 +17,10 @@ export default function InfoSection({ inputs, formID, info }) {
         <div className='info-section'>
             {inputMode ? <Form
                 id={formID}
-                handleSubmit={handleSubmit}>{inputs}
+                handleSubmit={handleSubmit}>
+                <div className="inputs">
+                    {inputs}
+                </div>
             </Form>
                 : <div className="info">{info}</div>}
             {!inputMode && <button className='edit-button' onClick={handleEditToggle}>Edit</button>}
