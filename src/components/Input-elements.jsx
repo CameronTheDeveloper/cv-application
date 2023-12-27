@@ -18,18 +18,21 @@ function Input({
     maxLength = 50,
     minLength = 1 }) {
 
+    const inputID = `${inputName}-input`;
+
     return (
-        <label>{labelText}:
+        <>
+            <label htmlFor={inputID}>{labelText}:</label>
             <input
                 type={inputType}
                 value={inputValue}
-                id={`${inputName}-input`}
+                id={inputID}
                 name={inputName}
                 onChange={handleChange}
                 maxLength={maxLength}
                 minLength={minLength}>
             </input>
-        </label>
+        </>
     );
 }
 
