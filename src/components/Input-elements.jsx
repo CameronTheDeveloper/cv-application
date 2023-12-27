@@ -33,7 +33,7 @@ function Input({
     );
 }
 
-function NameForm({
+function NameInputs({
     userInfo,
     handleChange,
     handleSubmit }) {
@@ -65,4 +65,4 @@ function NameForm({
     );
 }
 
-export { NameForm };
+export { NameInputs };

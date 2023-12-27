@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NameForm } from "./Input-elements";
+import { NameInputs } from "./Input-elements";
 import InfoSection from "./Info-section";
 
 function General_top() {
@@ -31,11 +31,11 @@ function General_mid() {
             {
                 <div>
                     <InfoSection
-                        inputs={<NameForm
+                        inputs={<NameInputs
                             userInfo={userInfo}
                             handleChange={handleChange}
                             handleSubmit={handleSubmit}>
-                        </NameForm>}
+                        </NameInputs>}
                         info={userFullName}>
                     </InfoSection>
 
