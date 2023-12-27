@@ -26,6 +26,9 @@ export default function ExperienceSection() {
                     <div className="company-name">
                         {userInfo.companyName}
                     </div>
+                    <div className="position-title">
+                        {userInfo.positionTitle}
+                    </div>
                 </>}></InfoSection>
         </Section>
     );

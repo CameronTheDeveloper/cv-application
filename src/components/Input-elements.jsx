@@ -117,6 +117,13 @@ function EmploymentInputs({ userInfo, handleChange }) {
                 inputName={'companyName'}
                 handleChange={handleChange}
             ></Input>
+            <Input
+                labelText={'Position Title'}
+                inputType={'text'}
+                inputValue={userInfo.positionTitle}
+                inputName={'positionTitle'}
+                handleChange={handleChange}
+            ></Input>
         </>
     );
 }
