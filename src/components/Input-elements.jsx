@@ -1,5 +1,14 @@
 import { useState } from "react";
 
+function Form({ id, handleSubmit, children }) {
+    return (
+        <form id={id} onSubmit={handleSubmit}>\
+            {children}
+            <button type='submit'>Submit</button>
+        </form>
+    );
+}
+
 function Input({
     labelText,
     inputType,
@@ -29,7 +38,7 @@ function NameForm({
     handleChange,
     handleSubmit }) {
     return (
-        <form id={'name-form'} onSubmit={handleSubmit}>
+        <Form id={'name-form'} onSubmit={handleSubmit}>
             <Input
                 labelText={'First Name'}
                 inputType={'text'}
@@ -52,8 +61,7 @@ function NameForm({
                 inputName={'lastName'}
                 handleChange={handleChange}>
             </Input>
-            <button type='submit'>Submit</button>
-        </form>
+        </Form>
     );
 }
 
