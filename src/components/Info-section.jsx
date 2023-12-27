@@ -23,6 +23,6 @@ function InfoSection({ inputs, formID, info }) {
             {!inputMode && <button className='edit-button' onClick={handleEditToggle}>Edit</button>}
         </div>
     );
-};
+}
 
 export default InfoSection;
