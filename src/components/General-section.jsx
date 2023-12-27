@@ -8,7 +8,7 @@ function General_top() {
     );
 }
 
-function General_mid() {
+function GeneralSection() {
     const [userInfo, setUserInfo] = useState({
         firstName: '',
         middleInit: '',
@@ -52,7 +52,7 @@ function GeneralInfo() {
     return (
         <div id='general-section'>
             <General_top></General_top>
-            <General_mid></General_mid>
+            <GeneralSection></GeneralSection>
         </div>
     );
 }
