@@ -4,6 +4,7 @@ import EducationSection from './components/EducationSection';
 import ExperienceSection from './components/ExperienceSection';
 import './App.css';
 import './styles/Section.css';
+import './styles/InfoSection.css';
 
 function App() {
 
