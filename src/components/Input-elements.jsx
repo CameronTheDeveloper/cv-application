@@ -64,4 +64,26 @@ function NameInputs({
     );
 }
 
-export { Form, NameInputs };
+function ContactInputs({ userInfo, handleChange }) {
+    return (
+        <>
+            <Input
+                labelText={'Email'}
+                inputType={'email'}
+                inputValue={userInfo.email}
+                inputName={'email'}
+                handleChange={handleChange}
+            ></Input>
+            <Input
+                labelText={'Phone Number'}
+                inputType={'tel'}
+                inputValue={userInfo.phoneNumber}
+                inputName={'phoneNumber'}
+                handleChange={handleChange}
+                maxLength={10}
+            ></Input>
+        </>
+    );
+}
+
+export { Form, NameInputs, ContactInputs };

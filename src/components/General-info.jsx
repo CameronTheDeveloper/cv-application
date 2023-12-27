@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NameInputs } from "./Input-elements";
+import { NameInputs, ContactInputs } from "./Input-elements";
 import InfoSection from "./Info-section";
 
 function General_top() {
@@ -12,7 +12,9 @@ function General_mid() {
     const [userInfo, setUserInfo] = useState({
         firstName: '',
         middleInit: '',
-        lastName: ''
+        lastName: '',
+        email: '',
+        phoneNumber: ''
     });
 
     const userFullName = `${userInfo.firstName} ${userInfo.middleInit}. ${userInfo.lastName}`;
@@ -33,7 +35,16 @@ function General_mid() {
                         formID={'name-form'}
                         info={userFullName}>
                     </InfoSection>
+                    <InfoSection
+                        inputs={<ContactInputs
+                            userInfo={userInfo}
+                            handleChange={handleChange}>
 
+                        </ContactInputs>}
+                        formID={'contact-form'}
+                        info={`${userInfo.email} ${userInfo.phoneNumber}`}>
+
+                    </InfoSection>
                 </div>
             }
         </div>
