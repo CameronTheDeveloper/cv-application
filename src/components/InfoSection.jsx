@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Form } from "./Input-elements";
 
-function InfoSection({ inputs, formID, info }) {
+export default function InfoSection({ inputs, formID, info }) {
     const [inputMode, setInputMode] = useState(true);
 
     function handleSubmit(e) {
@@ -25,4 +25,3 @@ function InfoSection({ inputs, formID, info }) {
     );
 }
 
-export default InfoSection;

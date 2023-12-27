@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NameInputs, ContactInputs } from "./Input-elements";
 import Section from "./Section";
-import InfoSection from "./Info-section";
+import InfoSection from "./InfoSection";
 
 export default function GeneralSection() {
     const [userInfo, setUserInfo] = useState({
