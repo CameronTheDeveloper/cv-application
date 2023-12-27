@@ -1,9 +1,16 @@
-.info-section form {
+/* Inputs */
+
+.info-section {
     display: flex;
     padding: 1rem;
+    justify-content: center;
 }
 
 .info-section form .inputs {
-    display: grid;
-    justify-items: start;
+    display: flex;
+    justify-content: center;
+}
+
+.info-section form .inputs label {
+    margin: 1rem;
 }
