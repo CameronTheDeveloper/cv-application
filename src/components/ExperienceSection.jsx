@@ -34,6 +34,9 @@ export default function ExperienceSection() {
                     <div className="start-date">
                         {userInfo.startDate}
                     </div>
+                    <div className="end-date">
+                        {userInfo.endDate}
+                    </div>
                 </>}></InfoSection>
         </Section>
     );
