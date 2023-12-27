@@ -37,7 +37,8 @@ export default function ExperienceSection() {
                     <div className="end-date">
                         {userInfo.endDate}
                     </div>
-                </>}></InfoSection>
+                </>}
+                formID={'employment-form'}></InfoSection>
         </Section>
     );
 }

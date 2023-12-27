@@ -27,7 +27,8 @@ export default function EducationSection() {
                         {userInfo.schoolName}
                     </div>
                     <div className="degree">{userInfo.degree}</div>
-                </>}>
+                </>}
+                formID={'school-form'}>
             </InfoSection>
         </Section>
     );
