@@ -21,7 +21,7 @@ function Input({
     const inputID = `${inputName}-input`;
 
     return (
-        <>
+        <div className="input">
             <label htmlFor={inputID}>{labelText}:</label>
             <input
                 type={inputType}
@@ -32,7 +32,7 @@ function Input({
                 maxLength={maxLength}
                 minLength={minLength}>
             </input>
-        </>
+        </div>
     );
 }
 
