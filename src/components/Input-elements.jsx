@@ -30,7 +30,8 @@ function Input({
                 name={inputName}
                 onChange={handleChange}
                 maxLength={maxLength}
-                minLength={minLength}>
+                minLength={minLength}
+                required>
             </input>
         </div>
     );
