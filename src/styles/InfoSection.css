@@ -6,11 +6,11 @@
     justify-content: center;
 }
 
-.info-section form .inputs {
+.info-section form .inputs-container {
     display: flex;
     justify-content: center;
 }
 
-.info-section form .inputs label {
+.info-section form .inputs-container label {
     margin: 1rem;
 }

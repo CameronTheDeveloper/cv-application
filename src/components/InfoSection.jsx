@@ -18,7 +18,7 @@ export default function InfoSection({ inputs, formID, info }) {
             {inputMode ? <Form
                 id={formID}
                 handleSubmit={handleSubmit}>
-                <div className="inputs">
+                <div className="inputs-container">
                     {inputs}
                 </div>
             </Form>
