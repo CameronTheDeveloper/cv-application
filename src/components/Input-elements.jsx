@@ -4,7 +4,7 @@ function Form({ id, handleSubmit, children }) {
     return (
         <form id={id} onSubmit={handleSubmit}>
             {children}
-            <button type='submit'>Submit</button>
+            <button className='submit-button' type='submit'>Submit</button>
         </form>
     );
 }
