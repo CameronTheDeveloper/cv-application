@@ -14,3 +14,13 @@
 .info-section form .inputs-container label {
     margin: 1rem;
 }
+
+.info-section button {
+    border-radius: 25%;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.info-section form .submit-button {
+    font-size: 1rem;
+}
