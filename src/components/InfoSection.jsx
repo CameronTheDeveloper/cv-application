@@ -2,29 +2,31 @@ import { useState } from "react";
 import { Form } from "./Input-elements";
 
 export default function InfoSection({ inputs, formID, info }) {
-    const [inputMode, setInputMode] = useState(true);
+  const [inputMode, setInputMode] = useState(true);
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        setInputMode(false);
-    }
+  function handleSubmit(e) {
+    e.preventDefault();
+    setInputMode(false);
+  }
 
-    function handleEditToggle() {
-        setInputMode(true);
-    }
+  function handleEditToggle() {
+    setInputMode(true);
+  }
 
-    return (
-        <div className='info-section'>
-            {inputMode ? <Form
-                id={formID}
-                handleSubmit={handleSubmit}>
-                <div className="inputs-container">
-                    {inputs}
-                </div>
-            </Form>
-                : <div className="info">{info}</div>}
-            {!inputMode && <button className='edit-button' onClick={handleEditToggle}>Edit</button>}
-        </div>
-    );
+  return (
+    <div className="info-section">
+      {inputMode ? (
+        <Form id={formID} handleSubmit={handleSubmit}>
+          <div className="inputs-container">{inputs}</div>
+        </Form>
+      ) : (
+        <div className="info">{info}</div>
+      )}
+      {!inputMode && (
+        <button className="edit-button" onClick={handleEditToggle}>
+          Edit
+        </button>
+      )}
+    </div>
+  );
 }
-

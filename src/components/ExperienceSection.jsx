@@ -4,41 +4,36 @@ import InfoSection from "./InfoSection";
 import { EmploymentInputs } from "./Input-elements";
 
 export default function ExperienceSection() {
-    const [userInfo, setUserInfo] = useState({
-        companyName: '',
-        positionTitle: '',
-        startDate: '',
-        endDate: '',
-    });
+  const [userInfo, setUserInfo] = useState({
+    companyName: "",
+    positionTitle: "",
+    startDate: "",
+    endDate: "",
+  });
 
-    function handleChange(e) {
-        setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
-    }
+  function handleChange(e) {
+    setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
+  }
 
-    return (
-        <Section
-            sectionTitle={'Experience'}
-            sectionID={'experience-section'}>
-            <InfoSection
-                inputs={<EmploymentInputs
-                    userInfo={userInfo}
-                    handleChange={handleChange}>
-                </EmploymentInputs>}
-                info={<>
-                    <div className="company-name">
-                        {userInfo.companyName}
-                    </div>
-                    <div className="position-title">
-                        {userInfo.positionTitle}
-                    </div>
-                    <div className="start-date">
-                        {userInfo.startDate}
-                    </div>
-                    <div className="end-date">
-                        {userInfo.endDate}
-                    </div>
-                </>}
-                formID={'employment-form'}></InfoSection>
-        </Section>
-    );
+  return (
+    <Section sectionTitle={"Experience"} sectionID={"experience-section"}>
+      <InfoSection
+        inputs={
+          <EmploymentInputs
+            userInfo={userInfo}
+            handleChange={handleChange}
+          ></EmploymentInputs>
+        }
+        info={
+          <>
+            <div className="company-name">{userInfo.companyName}</div>
+            <div className="position-title">{userInfo.positionTitle}</div>
+            <div className="start-date">{userInfo.startDate}</div>
+            <div className="end-date">{userInfo.endDate}</div>
+          </>
+        }
+        formID={"employment-form"}
+      ></InfoSection>
+    </Section>
+  );
 }

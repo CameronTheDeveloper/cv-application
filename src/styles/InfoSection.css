@@ -1,27 +1,27 @@
 /* Inputs */
 
 .info-section {
-    display: flex;
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .info-section form .inputs-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .info-section form .inputs-container label {
-    margin: 1rem;
+  margin: 1rem;
 }
 
 .info-section button {
-    border-radius: 25%;
-    margin: 1rem;
-    padding: 0.5rem;
+  border-radius: 25%;
+  margin: 1rem;
+  padding: 0.5rem;
 }
 
 .info-section form .submit-button {
-    font-size: 1rem;
+  font-size: 1rem;
 }
