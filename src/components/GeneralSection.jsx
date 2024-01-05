@@ -15,7 +15,8 @@ export default function GeneralSection() {
   const userFullName = `${userInfo.firstName} ${userInfo.middleInit}. ${userInfo.lastName}`;
 
   function handleChange(e) {
-    setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
+    const newUserInfo = { ...userInfo, [e.target.name]: e.target.value };
+    setUserInfo(newUserInfo);
   }
 
   return (
